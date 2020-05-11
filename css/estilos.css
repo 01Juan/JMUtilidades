@@ -1,0 +1,42 @@
+/* Aula inicial :D */
+body {
+    /* background: #0088ff; */
+    background-image: url(https://onaparelhosauditivos.com.br/wp-content/uploads/2018/09/eaf497_f7adc6bf3cbb4973bc08c124b19dfc67_mv2_d_2362_1476_s_2-2362x1181.jpg);
+    /* background-size: 500px 700px; */
+    background-size: 100vw auto;
+    font-family: Arial;
+    height: 100vh;
+  }
+  
+  .menu {
+    background-color: white;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+  }
+  
+  .menu li {
+    list-style:none;
+  }
+  
+  a {
+    color: teal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle,
+  .site-title {
+    /* color: whitesmoke; */
+    text-align: center;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+  }
