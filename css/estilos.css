@@ -1,15 +1,64 @@
-/* Aula inicial :D */
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     /* background: #0088ff; */
-    background-image: url(https://onaparelhosauditivos.com.br/wp-content/uploads/2018/09/eaf497_f7adc6bf3cbb4973bc08c124b19dfc67_mv2_d_2362_1476_s_2-2362x1181.jpg);
+    /* background-image: url('../img/fundo.jpg'); */
+    background-image: url('../img/pattern-369543_1280.png');
     /* background-size: 500px 700px; */
-    background-size: 100vw auto;
-    font-family: Arial;
+    background-size: auto 200vh;
+    background-position: center;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    /* font-family: Arial; */
     height: 100vh;
+    font-size: 12px;
+  }
+
+  /* se a tela tiver pelo menos 400px vai carregar esses estilos */
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* brekpoint */
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* brekpoint 
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+      background-image: none;
+      background-color: deeppink;
+    }
+  }*/
+
+  header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .menu {
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+
+  .menu a {
+    display: block;
+    /* background-color: red; */
+    padding: 10px 20px;
   }
   
   .menu ul {
@@ -37,6 +86,71 @@ body {
     text-align: center;
   }
   
+  .site-title {
+    color: whitesmoke;
+    font-size: 4em;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
   .site-subtitle {
+    color: whitesmoke;
     font-style: italic;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.8em;
+  }
+
+  .portfolio {
+    padding: 2em;
+    height: 100vh;
+  }
+
+  .portfolio h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+    font-size: 2em
+  }
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 4em - 48px - 1.5em);
+    }
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+/*
+  @media (min-width: 1200px){
+    .img-portfolio {
+      height: auto;
+      width: 100%;
+    }
+  }
+*/
+/*
+  .img-portfolio2 {
+    position: fixed;
+    bottom: -50px;
+    height: 200px;
   }
