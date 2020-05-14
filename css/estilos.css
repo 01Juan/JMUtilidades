@@ -8,11 +8,13 @@
 body {
     /* background: #0088ff; */
     /* background-image: url('../img/fundo.jpg'); */
-    background-image: url('../img/pattern-369543_1280.png');
+    /*background-image: url('../img/pattern-369543_1280.png');*/
+    background-image: url('../img/Star-Wars.png');
     /* background-size: 500px 700px; */
-    background-size: auto 200vh;
+    /*background-size: auto 200vh;*/
+    background-size: 100vw auto;
     background-position: center;
-    font-family: 'Liu Jian Mao Cao', cursive;
+    font-family: 'News Cycle', sans-serif;
     /* font-family: Arial; */
     height: 100vh;
     font-size: 12px;
@@ -53,12 +55,19 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
 
   .menu a {
     display: block;
     /* background-color: red; */
     padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+  }
+
+  .menu a:hover{
+    background-color: teal;
+    color: white;
   }
   
   .menu ul {
@@ -79,7 +88,49 @@ body {
   a:hover {
     text-decoration: underline;
   }
+
+  .titulo {
+    transform: scale(0.2) translateY(-50vh) perspective(300px);
+    opacity: 0;
+    /*animation: 1s ease 2s animacaoTitulo reverse;*/
+    animation: 1s linear 1s animacaoTitulo reverse;
+  }
+
+  /*transform: scale(1) translateY(0);*/
+  @keyframes animacaoTitulo{
+    100%{
+      
+      transform: scale(1) translateY(0) perspective(1);
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+  .titulo {
+    transform: perspective(250px) rotateX(45deg) translateY(60vh);
+    opacity: 1;
+    /*animation: 1s ease 2s animacaoTitulo reverse;*/
+    animation: 100s linear 1s animacaoTitulo forwards;
+    width: 100vw;
+  }
+
+  /*transform: scale(1) translateY(0);*/
+  @keyframes animacaoTitulo{
+    100%{
+      transform: perspective(250px) rotateX(45deg) translateY(-100vh);
+      opacity: 0;
+      width: 100vw;
+    }
+  }
   
+
+
+
+
+
   .site-subtitle,
   .site-title {
     /* color: whitesmoke; */
@@ -87,28 +138,45 @@ body {
   }
   
   .site-title {
-    color: whitesmoke;
+    color: #FFD700;
     font-size: 4em;
-    font-family: 'Gloria Hallelujah', cursive;
+    /*font-family: 'Gloria Hallelujah', cursive;*/
   }
   .site-subtitle {
-    color: whitesmoke;
+    color: #FFD700;
     font-style: italic;
-    font-family: 'Press Start 2P', cursive;
+    /*font-family: 'Press Start 2P', cursive;*/
     line-height: 1.8em;
   }
 
   .portfolio {
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
   }
 
+  .contato h2,
   .portfolio h2 {
     font-family: 'Press Start 2P', cursive;
     color: whitesmoke;
     margin-bottom: 1.5em;
     font-size: 2em
   }
+
+  .portfolio h2:after{
+    content: 'Juan';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+   }
+   @keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+  }
+
   .portfolio .grid {
     display: grid;
     gap: 2em;
@@ -139,7 +207,29 @@ body {
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
+    transition: transform 0.5s;
   }
+
+  .img-portfolio:hover{
+    transform: scale(1.1) rotate(360deg);
+  }
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color: whitesmoke;
+    font-size: 5em;
+    transition: text-shadow 0.5s;
+  }
+
+  .contato a:hover,
+  .contatoa:active {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px yellow;
+  }
+
 /*
   @media (min-width: 1200px){
     .img-portfolio {
